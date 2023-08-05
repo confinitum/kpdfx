@@ -1,0 +1,43 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# ignore all bin directories
+# matches "bin" in any subfolder
+bin/
+tmp/
+
+# ignore all target directories
+target/
+build/
+out/
+
+# kotlin
+.kotlintest/
+
+# ignore all files ending with ~
+*~ 
+Thumbs.db
+
+# eclipse workspace files
+.metadata/
+.settings/
+.idea/
+.vscode/
+
+# gradle
+.gradle/
+# !gradle-wrapper.jar
+gradle/
+gradlew.*
+gradlew
+
