@@ -37,7 +37,7 @@ Thumbs.db
 # gradle
 .gradle/
 # !gradle-wrapper.jar
-gradle/
+#gradle/
 #gradlew.*
 #gradlew
 
