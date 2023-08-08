@@ -5,8 +5,8 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
-group 'com.example'
-version '1.0-SNAPSHOT'
+group 'com.confinitum'
+version '1.0.0'
 
 repositories {
     mavenCentral()
@@ -14,12 +14,12 @@ repositories {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(11))
     }
 }
 
 application {
-    mainClass = 'com.confinitum.viewer.PdfViewerApplication'
+    mainClass = 'com.confinitum.viewer.NonModularStarterKt'
 }
 
 javafx {

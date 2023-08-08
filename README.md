@@ -51,8 +51,8 @@ pdfView.load(file)
 * Java 11+
 * Kotlin 1.8+
 
-> This project builds with Java 17
-> but 11, 15, 17, 19 also works.
+> This project builds with Java 11
+> but 15, 17, 19 should work.
 
 ### Installation / Running
 
