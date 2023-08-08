@@ -1,6 +1,6 @@
-package com.confinitum.pdfview.base
+package de.confinitum.pdfview.base
 
-import com.confinitum.pdfview.skin.PDFViewSkin
+import de.confinitum.pdfview.skin.PDFViewSkin
 import javafx.beans.InvalidationListener
 import javafx.beans.property.*
 import javafx.concurrent.Service

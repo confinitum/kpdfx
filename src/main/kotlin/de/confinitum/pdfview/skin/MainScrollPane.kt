@@ -1,7 +1,7 @@
-package com.confinitum.pdfview.skin
+package de.confinitum.pdfview.skin
 
-import com.confinitum.pdfview.base.PDFBoxDocument
-import com.confinitum.pdfview.base.RenderService
+import de.confinitum.pdfview.base.PDFBoxDocument
+import de.confinitum.pdfview.base.RenderService
 import javafx.animation.RotateTransition
 import javafx.beans.property.SimpleDoubleProperty
 import javafx.geometry.Point2D

@@ -1,8 +1,8 @@
-package com.confinitum.pdfview.skin
+package de.confinitum.pdfview.skin
 
-import com.confinitum.pdfview.base.PDFBoxDocument
-import com.confinitum.pdfview.base.PageKey
-import com.confinitum.pdfview.base.RenderService
+import de.confinitum.pdfview.base.PDFBoxDocument
+import de.confinitum.pdfview.base.PageKey
+import de.confinitum.pdfview.base.RenderService
 import javafx.beans.value.ChangeListener
 import javafx.geometry.Point2D
 import javafx.geometry.Pos

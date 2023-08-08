@@ -1,14 +1,14 @@
-package com.confinitum.pdfview
+package de.confinitum.pdfview
 
 /**
  * No idiomatic kotlin here because of javafx conventions
  */
 
-import com.confinitum.pdfview.base.Document
-import com.confinitum.pdfview.base.PDFBoxDocument
-import com.confinitum.pdfview.base.ToolbarConfig
-import com.confinitum.pdfview.base.getExecutor
-import com.confinitum.pdfview.skin.PDFViewSkin
+import de.confinitum.pdfview.base.Document
+import de.confinitum.pdfview.base.PDFBoxDocument
+import de.confinitum.pdfview.base.ToolbarConfig
+import de.confinitum.pdfview.base.getExecutor
+import de.confinitum.pdfview.skin.PDFViewSkin
 import javafx.beans.property.*
 import javafx.scene.control.Control
 import javafx.scene.control.Skin

@@ -1,6 +1,6 @@
-package com.confinitum.viewer
+package de.confinitum.viewer
 
-import com.confinitum.pdfview.PDFView
+import de.confinitum.pdfview.PDFView
 import javafx.application.Platform
 import javafx.fxml.FXML
 import javafx.scene.layout.BorderPane

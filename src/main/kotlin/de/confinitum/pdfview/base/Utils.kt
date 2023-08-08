@@ -1,6 +1,6 @@
-package com.confinitum.pdfview.base
+package de.confinitum.pdfview.base
 
-import com.confinitum.pdfview.PDFView
+import de.confinitum.pdfview.PDFView
 import javafx.scene.control.ListView
 import javafx.scene.control.skin.VirtualFlow
 import java.util.concurrent.Executor

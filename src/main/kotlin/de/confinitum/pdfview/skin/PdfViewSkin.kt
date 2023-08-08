@@ -1,8 +1,8 @@
-package com.confinitum.pdfview.skin
+package de.confinitum.pdfview.skin
 
-import com.confinitum.pdfview.PDFView
-import com.confinitum.pdfview.base.PageKey
-import com.confinitum.pdfview.base.maybeScrollTo
+import de.confinitum.pdfview.PDFView
+import de.confinitum.pdfview.base.PageKey
+import de.confinitum.pdfview.base.maybeScrollTo
 import javafx.beans.binding.Bindings
 import javafx.beans.property.DoubleProperty
 import javafx.beans.property.ObjectProperty

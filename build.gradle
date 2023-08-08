@@ -5,7 +5,7 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
-group 'com.confinitum'
+group 'de.confinitum'
 version '1.0.0'
 
 repositories {
@@ -19,7 +19,7 @@ java {
 }
 
 application {
-    mainClass = 'com.confinitum.viewer.NonModularStarterKt'
+    mainClass = 'de.confinitum.viewer.NonModularStarterKt'
 }
 
 javafx {

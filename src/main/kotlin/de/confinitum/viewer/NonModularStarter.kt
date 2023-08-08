@@ -1,4 +1,4 @@
-package com.confinitum.viewer
+package de.confinitum.viewer
 
 import javafx.application.Application
 

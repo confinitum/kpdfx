@@ -1,4 +1,4 @@
-package com.confinitum.pdfview.base
+package de.confinitum.pdfview.base
 
 import javafx.collections.FXCollections
 import javafx.collections.ObservableList
