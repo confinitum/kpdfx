@@ -5,7 +5,7 @@
 # This workflow will build a package using Gradle and then publish it to GitHub packages when a release is created
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
 
-name: Gradle Package
+name: Publish to GitHub Packages
 
 on:
   release:
@@ -39,7 +39,7 @@ jobs:
     - name: Publish to GitHub Packages
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
-        arguments: publish
+        arguments: publishBundlePublicationToGitHubPackagesRepository
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
