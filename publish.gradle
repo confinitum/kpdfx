@@ -22,8 +22,8 @@ nexusPublishing {
         sonatype {
             nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
             snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
-            username = project.findProperty("SONATYPEUSERNAME")
-            password = project.findProperty("SONATYPEPASSWORD")
+            username = findProperty("SONATYPEUSERNAME")
+            password = findProperty("SONATYPEPASSWORD")
         }
     }
     // these are not strictly required. The default timeouts are set to 1 minute.
@@ -79,8 +79,8 @@ publishing {
 signing {
     def ringfile = project.findProperty("signing.secretKeyRingFile")
     if (ringfile == null) {
-        def signingKey = findProperty("signingKey")
-        def signingPassword = findProperty("signingPassword")
+        def signingKey = findProperty("SIGNINGKEY")
+        def signingPassword = findProperty("SIGNINGPASSWORD")
         useInMemoryPgpKeys(signingKey, signingPassword)
     }
     sign publishing.publications.bundle
