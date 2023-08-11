@@ -8,7 +8,7 @@
 
 This is a JavaFX PDF-Viewer Control written in Kotlin.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](#about-the-project)
 
 It is based on [PDFViewFX](https://github.com/dlsc-software-consulting-gmbh/PDFViewFX)
 
@@ -31,14 +31,45 @@ It is based on [PDFViewFX](https://github.com/dlsc-software-consulting-gmbh/PDFV
 
 ## Getting Started
 
+### Prerequisites
+
+* Java 11+
+* Kotlin 1.8+
+
+> This project builds with Java 11
+> but 15, 17, 19 also works.
+
+### Add dependency:
+
+* Maven
+
+```xml
+
+<dependency>
+   <groupId>de.confinitum</groupId>
+   <artifactId>kpdfx</artifactId>
+   <version>1.0.0</version>
+</dependency>
+```
+
+* Gradle
+
+```groovy
+implementation 'de.confinitum:kpdfx:1.0.0'
+```
+
+### Code
 Look at [PdfViewController](src/main/kotlin/com/confinitum/viewer/PdfViewController.kt)
 for basic idea how to use this control.
 
+* Kotlin
 ```kotlin
 // create Control
-val pdfView = PdfView()
-// tweak properties 
-pdfView.setShowThumbnails(false)
+val pdfView = PDFView().also {
+   // tweak properties 
+   it.setShowThumbnails(false)
+   it.setThumbniailSize(150.0)
+}
 // add it to parent
 somePane.children.add(pdfView)
 
@@ -46,18 +77,21 @@ somePane.children.add(pdfView)
 pdfView.load(file)
 ```
 
-### Prerequisites
+* Java
 
-* Java 11+
-* Kotlin 1.8+
+```java
+  PDFView pdfView=new PDFView();
+        pdfView.setShowThumbnails(false);
+        pdfView.setThumbnailSize(150.0);
+        // VBox.setVgrow(pdfView, Priority.ALWAYS);
+        somePane.getChildren().add(pdfView);
+        pdfView.load(file);
+```
 
-> This project builds with Java 11
-> but 15, 17, 19 should work.
-
-### Installation / Running
+### Installation / Running Demo Application
 
 1. Clone the repo
-3. Run the Viewer
+3. Run the Demo App
    ```sh
    gradlew clean run
    ```
