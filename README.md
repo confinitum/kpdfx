@@ -80,10 +80,10 @@ pdfView.load(file)
 * Java
 
 ```java
-  PDFView pdfView=new PDFView();
+PDFView pdfView=new PDFView();
         pdfView.setShowThumbnails(false);
         pdfView.setThumbnailSize(150.0);
-        // VBox.setVgrow(pdfView, Priority.ALWAYS);
+// VBox.setVgrow(pdfView, Priority.ALWAYS);
         somePane.getChildren().add(pdfView);
         pdfView.load(file);
 ```
@@ -92,9 +92,10 @@ pdfView.load(file)
 
 1. Clone the repo
 3. Run the Demo App
-   ```sh
-   gradlew clean run
-   ```
+
+```sh
+gradlew clean run
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
