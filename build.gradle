@@ -12,7 +12,7 @@ plugins {
 apply from: "publish.gradle"
 
 group 'de.confinitum'
-version '1.0.0'
+version '1.0.1'
 
 repositories {
     mavenCentral()

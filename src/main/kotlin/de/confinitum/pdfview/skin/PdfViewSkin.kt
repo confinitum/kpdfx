@@ -31,7 +31,8 @@ enum class PostScroll {
 class PDFViewSkin(private val view: PDFView) : SkinBase<PDFView>(view) {
     private var mainArea: MainScrollPane
     var requestedVValue = PostScroll.NONE
-    val thumbnailWidth: DoubleProperty = SimpleDoubleProperty(0.0) //minimum TN width
+    private val thumbnailWidth: DoubleProperty = SimpleDoubleProperty(0.0) //minimum TN width
+    private var resetThumbnailWidth = false
 
     //current viewport bounds relative to image size eg. all values between 0.0 and 1.0
     val currentViewport: ObjectProperty<Rectangle2D> = SimpleObjectProperty(Rectangle2D(0.0, 0.0, 1.0, 1.0))
@@ -97,7 +98,7 @@ class PDFViewSkin(private val view: PDFView) : SkinBase<PDFView>(view) {
         //new document opened
         view.documentProperty().addListener { _, _, n ->
             n?.let {
-                thumbnailWidth.set(0.0)
+                resetThumbnailWidth = true
                 thumbnailListView.items = it.pagesList
                 thumbnailListView.refresh()
                 mainArea.reload()
@@ -124,6 +125,19 @@ class PDFViewSkin(private val view: PDFView) : SkinBase<PDFView>(view) {
     //set viewport
     fun setViewport(rectangle: Rectangle2D) {
         mainArea.setViewport(rectangle)
+    }
+
+    //recalculate minimum width for thumbnails
+    fun registerThumbnailWidth(w: Double) {
+        if (resetThumbnailWidth) {
+            val diff = thumbnailWidth.get() - w
+            if (diff > 4 || diff < 0) { // suppress micro adjustments
+                thumbnailWidth.set(w + 2)
+            }
+            resetThumbnailWidth = false
+        } else {
+            thumbnailWidth.set(max(thumbnailWidth.get(), w))
+        }
     }
 
     //move viewport indicator to newPage

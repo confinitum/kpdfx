@@ -121,8 +121,9 @@ class PDFBoxDocument(pdfInputStream: InputStream?) : Document {
     }
 
     override fun setViewport(pageNumber: Int, viewport: Rectangle2D?) {
-        val pageKey = pagesList[pageNumber]
-        pagesList.set(pageNumber, pageKey.copy(viewport = viewport))
+        pagesList.getOrNull(pageNumber)?.let {
+            pagesList.set(pageNumber, it.copy(viewport = viewport))
+        }
     }
 
     override val numberOfPages: Int

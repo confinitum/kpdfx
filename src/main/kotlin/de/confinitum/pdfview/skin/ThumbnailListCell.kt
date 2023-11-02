@@ -102,7 +102,9 @@ class ThumbnailListCell(private val pdfViewSkin: PDFViewSkin) : ListCell<PageKey
         //recalculate minimum width for thumbnails
         imageView.boundsInParentProperty().addListener { _, _, w ->
             w?.let {
-                pdfViewSkin.thumbnailWidth.set(max(pdfViewSkin.thumbnailWidth.get(), w.width))
+                if (imageView.imageProperty().isNotNull.get()) {
+                    pdfViewSkin.registerThumbnailWidth(w.width)
+                }
             }
         }
     }
