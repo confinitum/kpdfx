@@ -227,11 +227,14 @@ internal class MainScrollPane(private val pdfViewSkin: PDFViewSkin) : ScrollPane
         val offset = newMouseOffset.subtract(mousePointer) //offset (top-left corner)
 
         val scrollValue = getViewportScroll(offset)
-        layoutImage(scrollValue = scrollValue)
+
+        imageView.image?.let { // maybe it's not loaded yet
+            layoutImage(it, scrollValue = scrollValue)
+        }
     }
 
     //calculate image bounds with regard to zoom and scaling
-    private fun layoutImage(image: Image = imageView.image, scrollValue: Point2D = Point2D(this.hvalue, this.vvalue)) {
+    private fun layoutImage(image: Image, scrollValue: Point2D = Point2D(this.hvalue, this.vvalue)) {
         imageView.let {
             it.fitWidth = (image.width / imageScale.get()) * screenScale * pdfViewSkin.skinnable.getZoomFactor()
             it.fitHeight = (image.height / imageScale.get()) * screenScale * pdfViewSkin.skinnable.getZoomFactor()

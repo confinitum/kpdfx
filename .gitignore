@@ -32,6 +32,7 @@ Thumbs.db
 .metadata/
 .settings/
 .idea/
+.run/
 .vscode/
 
 # gradle
