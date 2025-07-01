@@ -48,14 +48,14 @@ It is based on [PDFViewFX](https://github.com/dlsc-software-consulting-gmbh/PDFV
 <dependency>
    <groupId>de.confinitum</groupId>
    <artifactId>kpdfx</artifactId>
-   <version>1.0.0</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 
 * Gradle
 
 ```groovy
-implementation 'de.confinitum:kpdfx:1.0.0'
+implementation 'de.confinitum:kpdfx:1.0.3'
 ```
 
 ### Code

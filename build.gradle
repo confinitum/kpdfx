@@ -12,7 +12,7 @@ plugins {
 apply from: "publish.gradle"
 
 group 'de.confinitum'
-version '1.0.2'
+version '1.0.3'
 
 repositories {
     mavenCentral()
@@ -35,9 +35,11 @@ javafx {
 
 dependencies {
     implementation 'org.slf4j:slf4j-api:1.7.28'
+
     implementation 'ch.qos.logback:logback-classic:1.2.9'
 
     implementation 'org.apache.pdfbox:pdfbox:2.0.25'
+    implementation 'org.apache.pdfbox:jbig2-imageio:3.0.4'
 //    implementation 'org.controlsfx:controlsfx:11.1.2'
 
     implementation 'org.kordamp.ikonli:ikonli-core:12.3.0'
