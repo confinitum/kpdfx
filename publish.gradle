@@ -4,7 +4,7 @@ apply plugin: libs.plugins.publishOnCentral.get().pluginId
 publishOnCentral {
     repoOwner = 'Jacek Wicka'
     projectDescription = 'Kotlin JavaFx PdfView Control'
-    projectLongName = "${project.group}:${project.name}"
+    projectLongName = "${project.name}"
     projectUrl = 'https://github.com/confinitum/kpdfx.git'
     licenseName = 'The Apache License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -13,8 +13,7 @@ publishOnCentral {
 
 publishing {
     publications {
-        bundle(MavenPublication) {
-            from components.java
+        OSSRH(MavenPublication) {
             pom {
                 developers {
                     developer {
