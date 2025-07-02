@@ -1,0 +1,33 @@
+[versions]
+kotlin = "1.9.0"
+shadow = "7.1.0"
+dokka = "2.0.0"
+poc = "9.0.6"
+javafx_p = "0.0.14"
+pdfbox_version = "2.0.25"
+jbig2 = "3.0.4"
+slf4j = "1.7.28"
+ikonli = "12.3.0"
+commons = "3.12.0"
+junit = "5.9.2"
+logback = "1.5.6"
+
+[libraries]
+pdf-box = { module = "org.apache.pdfbox:pdfbox-app", version.ref = "pdfbox_version" }
+pdf-box-jbig2 = { module = "org.apache.pdfbox:jbig2-imageio", version.ref = "jbig2" }
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+ikonli-core = { module = "org.kordamp.ikonli:ikonli-core", version.ref = "ikonli" }
+ikonli-materialdesign2 = { module = "org.kordamp.ikonli:ikonli-materialdesign2-pack", version.ref = "ikonli" }
+ikonli-javafx = { module = "org.kordamp.ikonli:ikonli-javafx", version.ref = "ikonli" }
+commons-lang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commons" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
+
+[plugins]
+javafx = { id = 'org.openjfx.javafxplugin', version.ref = 'javafx_p' }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinx-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+publishOnCentral = { id = "org.danilopianini.publish-on-central", version.ref = "poc" }
+shadow = { id = "com.github.johnrengelman.shadow", version.ref = "shadow" }
